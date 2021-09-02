@@ -12,9 +12,39 @@ export class AppComponent {
   /**
    *
    */
+
+  public edadUno;
+  public edadDos;
+  public resultadoPromedio;
+  public resultadoSuma;
+
   constructor() {
     this.miUsuario= new Usuario();
+    this.edadUno = 0;
+    this.edadDos = 0;
+    this.resultadoPromedio = 0;
+    this.resultadoSuma = 0;
     
+  }
+
+  promedio() {
+    this.resultadoPromedio = (Number(this.edadUno) + Number(this.edadDos))/2;
+  }
+
+  suma() {
+    this.resultadoSuma = (Number(this.edadUno) + Number(this.edadDos));
+  }
+
+  calcular() {
+    this.suma();
+    this.promedio();
+  }
+
+  limpiar() {
+    this.edadUno = 0;
+    this.edadDos = 0;
+    this.resultadoPromedio = 0;
+    this.resultadoSuma = 0;
   }
   saludar(){console.log("Holaaaaa")};
 }
