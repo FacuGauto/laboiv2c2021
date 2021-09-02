@@ -3,6 +3,6 @@ export class Usuario {
     clave:string;
     constructor(){
         this.nombre="Facundo";
-        this.clave="1234";
+        this.clave="12345";
     }
 }
